@@ -1,0 +1,254 @@
+.access-log-search {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.access-log-keyword-field {
+  width: min(100%, 720px);
+}
+
+.access-log-keyword-field.ant-form-item {
+  margin-bottom: 0;
+}
+
+.access-log-keyword-field .ant-form-item-control {
+  min-width: 0;
+}
+
+.access-log-search-row {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+}
+
+.access-log-search-row .ant-form-item {
+  margin-bottom: 0;
+}
+
+.access-log-help-row {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.access-log-help-row code {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.access-log-list {
+  margin-top: 16px;
+}
+
+.access-log-list-viewport {
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.access-log-list-viewport .ant-listy-item,
+.access-log-list-viewport .access-log-listy-item {
+  padding: 0;
+  background: transparent;
+  border-bottom: 0;
+}
+
+.access-log-list-viewport .ant-listy-item:hover,
+.access-log-list-viewport .access-log-listy-item:hover {
+  background: transparent;
+}
+
+.access-log-row {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 14px 11px 12px;
+  border-block: 0;
+  border-inline-end: 0;
+  border-inline-start: 3px solid transparent;
+  border-bottom: 1px solid var(--ant-color-split);
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  transition: background-color 0.2s ease;
+}
+
+.access-log-row:last-child {
+  border-bottom: 0;
+}
+
+.access-log-row-striped {
+  background: var(--ant-color-fill-quaternary);
+}
+
+.access-log-row:hover,
+.access-log-row:focus-visible {
+  background: var(--ant-color-primary-bg);
+  box-shadow: inset 0 0 0 1px var(--ant-color-primary-border);
+}
+
+.access-log-meta,
+.access-log-request {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 8px;
+}
+
+.access-log-meta {
+  flex-wrap: wrap;
+  color: var(--ant-color-text-secondary);
+  font-size: 12px;
+}
+
+.access-log-meta .ant-tag {
+  margin-inline-end: 0;
+}
+
+.access-log-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.access-log-status {
+  font-weight: 600;
+}
+
+.access-log-time,
+.access-log-ip,
+.access-log-cost {
+  white-space: nowrap;
+}
+
+.access-log-time small {
+  color: var(--ant-color-text-tertiary);
+  margin-inline-start: 4px;
+}
+
+.access-log-origin-status {
+  color: var(--ant-color-text-tertiary);
+  white-space: nowrap;
+}
+
+.access-log-request {
+  margin-top: 7px;
+  padding-inline-start: 2px;
+  color: var(--ant-color-text);
+  font-family: var(--ant-font-family-code);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.access-log-request-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.access-log-external {
+  flex: 0 0 auto;
+  font-family: var(--ant-font-family);
+}
+
+.access-log-status-message {
+  flex: 0 0 auto;
+  color: var(--ant-color-text-tertiary);
+  font-family: var(--ant-font-family);
+  white-space: nowrap;
+}
+
+.access-log-meta a {
+  border-radius: 4px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.access-log-meta a:hover,
+.access-log-meta a:focus-visible {
+  background: var(--ant-color-primary-bg);
+  color: var(--ant-color-primary);
+  text-decoration: none;
+}
+
+.access-log-meta a:hover .ant-tag,
+.access-log-meta a:focus-visible .ant-tag {
+  border-color: var(--ant-color-primary-border);
+  color: var(--ant-color-primary);
+  background: var(--ant-color-primary-bg);
+}
+
+.access-log-external:hover,
+.access-log-external:focus-visible {
+  color: var(--ant-color-primary);
+  text-decoration: underline;
+}
+
+.access-log-keyword {
+  padding: 0 2px;
+  border: 1px dashed var(--ant-color-warning);
+  border-radius: 2px;
+  background: var(--ant-color-warning-bg);
+  color: var(--ant-color-warning-text);
+}
+
+.access-log-list-footer,
+.access-log-loading {
+  min-height: 30px;
+  padding-top: 12px;
+  color: var(--ant-color-text-tertiary);
+  text-align: center;
+}
+
+.access-log-breakable {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.access-log-body {
+  max-height: 360px;
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: 6px;
+  background: var(--ant-color-fill-quaternary);
+  font-family: var(--ant-font-family-code);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.access-log-error-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .access-log-row {
+    padding-inline: 10px;
+  }
+
+  .access-log-status-message {
+    display: none;
+  }
+
+  .access-log-request-text {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

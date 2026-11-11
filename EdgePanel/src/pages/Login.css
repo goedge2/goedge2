@@ -1,0 +1,43 @@
+.login-page {
+  --login-shadow: 0 24px 80px -24px rgb(31 70 120 / 18%);
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  min-height: 100svh;
+  padding: 80px 24px;
+  overflow: hidden;
+}
+
+.login-page[data-theme="dark"] {
+  --login-shadow: 0 24px 80px -24px rgb(0 0 0 / 60%);
+}
+
+.login-theme-selector {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 24px;
+}
+
+.login-card {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--login-shadow);
+  backdrop-filter: blur(16px);
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 72px 16px 32px;
+  }
+
+  .login-theme-selector {
+    top: 16px;
+    right: 16px;
+  }
+
+  .login-card .ant-card-body {
+    padding: 20px;
+  }
+}
